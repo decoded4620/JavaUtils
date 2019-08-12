@@ -1,0 +1,64 @@
+// This Gradle File defines the available dependencies that all milli Java Applications agree on. 
+// It serves the entire system when all products can be on like versions.
+// Remember that changes to this file will affect everyone, so be sure that it makes sense!
+// If you need to override these dependencies, simply use your own version in your own build file.
+
+ext {
+    kotlin_version = "1.2.0"
+    javaVersion = "1.8"
+    playVersion = "2.6.22"
+    scalaVersion = System.getProperty("scala.binary.version", /* default = */ "2.12")
+    akkaVersion = "2.5.17"
+    akkaHTTPVersion = "10.1.4"
+    jacksonVersion = "2.9.7"
+    javaxValidationVersion = "2.0.1.Final"
+    jedisVersion = "2.9.0"
+    guavaVersion = "27.1-jre"
+    gsonVersion = "2.7"
+    mockitoVersion = "2.27.0"
+    zookeeperVersion = "3.5.4-beta"
+    kotlinVersion = "1.2.71"
+    typesafeConfigVersion = "1.3.3"
+    hailstormVersion = "1.0"
+    zoolVersion = "1.0"
+    stereoVersion = "1.0"
+    polldancerVersion = "1.0"
+    apacheHttpClientVersion = "4.5.8"
+    apacheHttpCoreVersion = "4.4.11"
+
+    appDependencies = [
+            apacheHttpClient     : "org.apache.httpcomponents:httpclient:$apacheHttpClientVersion",
+            apacheHttpCoreNio    : "org.apache.httpcomponents:httpcore-nio:$apacheHttpCoreVersion",
+            bson                 : "org.mongodb:bson:3.10.2",
+            caffeine             : "com.github.ben-manes.caffeine:caffeine:1.0.0",
+            jacksonDataBind      : "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            jacksonDataFormatYAML: "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jacksonVersion",
+            jacksonDataFormatXML : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:$jacksonVersion",
+            jedisService         : "redis.clients:jedis:$jedisVersion",
+            akkaActor            : "com.typesafe.akka:akka-actor_$scalaVersion:$akkaVersion",
+            akkaStream           : "com.typesafe.akka:akka-stream_$scalaVersion:$akkaVersion",
+            akkaSlf4j            : "com.typesafe.akka:akka-slf4j_$scalaVersion:$akkaVersion",
+            apacheCommons3       : "org.apache.commons:commons-lang3:3.0",
+            gson                 : "com.google.code.gson:gson:$gsonVersion",
+            mongoDbDriver        : 'org.mongodb:mongodb-driver:3.10.2',
+            play                 : "com.typesafe.play:play_$scalaVersion:$playVersion",
+            playParSeq           : "com.linkedin.play-parseq:play-parseq_$scalaVersion:0.9.3",
+            guice                : "com.typesafe.play:play-guice_$scalaVersion:2.6.7",
+            guava                : "com.google.guava:guava:$guavaVersion",
+            javaxValidation      : "javax.validation:validation-api:$javaxValidationVersion",
+            zookeeper            : "org.apache.zookeeper:zookeeper:$zookeeperVersion",
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+            typesafeConfig       : "com.typesafe:config:$typesafeConfigVersion",
+            zool                 : "com.decoded:zool:$zoolVersion",
+            hailstorm            : "com.decoded:hailstorm:$hailstormVersion",
+            stereohttp           : "com.decoded:stereohttp:$stereoVersion",
+            polldancer           : "com.decoded:polldancer:$polldancerVersion"
+    ]
+
+    testDependencies = [
+            awaitUtil  : "org.awaitility:awaitility:2.0.0",
+            assertJCore: "org.assertj:assertj-core:3.11.1",
+            junit      : "junit:junit:4.12",
+            mockito    : "org.mockito:mockito-core:$mockitoVersion"
+    ]
+}
