@@ -40,7 +40,7 @@ publishing {
 
                 licenses {
                     license {
-                        name = 'Milli Labs, Inc.'
+                        name = 'Decoded, Inc.'
                         url = 'TODO'
                     }
                 }
