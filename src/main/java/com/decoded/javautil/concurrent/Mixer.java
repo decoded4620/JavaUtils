@@ -48,4 +48,14 @@ public class Mixer {
       CompletableFuture<D> dF) {
     return new Par4<>(aF, bF, cF, dF);
   }
+
+  /**
+   * The future value (Completed)
+   * @param value a value
+   * @param <U> the type
+   * @return a {@link CompletableFuture} of the value.
+   */
+  public static <U> CompletableFuture<U> future(U value) {
+    return CompletableFuture.completedFuture(value);
+  }
 }
