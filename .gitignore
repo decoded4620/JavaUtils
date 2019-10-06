@@ -6,3 +6,6 @@ build
 *.ipr
 *.iml
 out
+target
+/build
+/target
