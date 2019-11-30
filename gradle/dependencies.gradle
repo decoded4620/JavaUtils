@@ -10,7 +10,7 @@ ext {
     scalaVersion = System.getProperty("scala.binary.version", /* default = */ "2.12")
     akkaVersion = "2.5.17"
     akkaHTTPVersion = "10.1.4"
-    jacksonVersion = "2.9.7"
+    jacksonVersion = "2.9.10.1"
     javaxValidationVersion = "2.0.1.Final"
     jedisVersion = "2.9.0"
     guavaVersion = "27.1-jre"
@@ -32,8 +32,8 @@ ext {
             bson                 : "org.mongodb:bson:3.10.2",
             caffeine             : "com.github.ben-manes.caffeine:caffeine:1.0.0",
             jacksonDataBind      : "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
-            jacksonDataFormatYAML: "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jacksonVersion",
-            jacksonDataFormatXML : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:$jacksonVersion",
+            jacksonDataFormatYAML: "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.7.0",
+            jacksonDataFormatXML : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.7.0",
             jedisService         : "redis.clients:jedis:$jedisVersion",
             akkaActor            : "com.typesafe.akka:akka-actor_$scalaVersion:$akkaVersion",
             akkaStream           : "com.typesafe.akka:akka-stream_$scalaVersion:$akkaVersion",
